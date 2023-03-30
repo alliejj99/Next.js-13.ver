@@ -4,6 +4,11 @@ async function getPost(postId: string) {
     { next: { revalidate: 10 } } // 캐시된 데이터를 일정 시간 간격으로 재검증 하려면 fetch에서 next.revalidate 옵션을 사용할 수 있습니다. 기본 단위는 "초"입니다.
   );
 
+  if (!res.ok) {
+    // 가장 가까이에 있는 error.js 페이지가 활성화 됩니다.
+    throw new Error("Failed to Fetch Data");
+  }
+
   const data = res.json();
   return data;
 }
