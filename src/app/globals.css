@@ -16,8 +16,14 @@ body {
 }
 
 a {
-  color: inherit;
   text-decoration: none;
+  color: lightcoral;
+}
+a:hover {
+  text-decoration: underline;
+}
+p {
+  margin-bottom: 1rem;
 }
 
 @media (prefers-color-scheme: dark) {

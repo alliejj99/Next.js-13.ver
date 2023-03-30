@@ -3,8 +3,10 @@ import React from "react";
 
 async function getPosts() {
   const res = await fetch(
-    "http://127.0.0.1:8090/api/collections/posts/records"
+    "http://127.0.0.1:8090/api/collections/posts/records",
+    { cache: "no-store" } // 캐시가 안되게 하고 리퀘스트마다 다시 가져올 수 있도록 처리하는 과정
   );
+
   const data = await res.json();
 
   // data가 존재하면 items를 리턴하고 타입은 any로 설정
