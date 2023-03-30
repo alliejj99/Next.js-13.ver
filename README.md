@@ -12,15 +12,17 @@
     6. New Collection -> Name은 프로젝트명 -> New Field -> title 필드만 생성
     7. 상단의 톱니바퀴 아이콘(설정) 클릭
     8. API Rules 클릭
-    7. 잠금 해제 아이콘을 전부 잠금으로 변경 후 save change 클릭
-
+    7. 잠금 해제 아이콘을 전부 잠금으로 변경 후 save change 클릭  
+  
     - Data Create
       1. New Record
-      2. id는 설정X Title에만 데이터 작성후 Create 클릭
+      2. id는 설정X Title에만 데이터 작성후 Create 클릭  
+      
+    - Server started at http://127.0.0.1:8090
     
 ---
 #### Next.js 13버전
-- **Component**
+- **Component**  
   next.js 컴포넌트는 기본적으로 Server Component입니다.  
   React.js 18버전 이전에는 React를 사용하여 애플리케이션을 렌더링하는 기본적인 방법은 전적으로 클라이언트에서 하였습니다. 18버전 부터는 컴포넌트 사용이 가능해졌습니다.  
     

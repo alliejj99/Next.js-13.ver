@@ -14,10 +14,10 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
-        <link
+        {/* <link
           rel="stylesheet"
           href="https://cdn.jsdelivr.net/npm/reset-css@5.0.1/reset.min.css"
-        />
+        /> */}
       </head>
       <body>
         <nav>
