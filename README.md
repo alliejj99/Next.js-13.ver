@@ -36,3 +36,45 @@
 - **Data Fetching**  
   [data-fetching DOCS](https://nextjs.org/docs/basic-features/data-fetching/get-static-props)  
   - getPost  
+
+- **Error 처리**
+  ```javascript
+  async function getPost(postId: string) {
+    const res = await fetch(
+      `http://127.0.0.1:8090/api/collections/posts/records/${postId}`,
+      { next: { revalidate: 10 } } // 캐시된 데이터를 일정 시간 간격으로 재검증 하려면 fetch에서 next.revalidate 옵션을 사용할 수 있습니다. 기본 단위는 "초"입니다.
+    );
+
+    if (!res.ok) {
+      // 가장 가까이에 있는 error.js 페이지가 활성화 됩니다.
+      throw new Error("Failed to Fetch Data");
+    }
+
+    const data = res.json();
+    return data;
+  }
+  ```
+
+- **수동으로 업데이트 해야하는 부분 수정**
+  ```typescript
+  const router = useRouter();
+
+    const handleSubmit = useCallback(
+      async (e: React.FormEvent<HTMLFormElement>) => {
+        e.preventDefault();
+
+        await fetch("http://127.0.0.1:8090/api/collections/posts/records/", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({
+            title,
+          }),
+        });
+
+        setTitle("");
+        // refresh()를 호츌하면 현재 경로가 서버에서 업데이트된 할 일 목록을 새로고침 하고 가져옵니다.
+        router.refresh();
+      },
+      [router, title]
+    );
+  ```
