@@ -28,4 +28,4 @@
     
   이제 서버 및 클라이언트 Component를 사용하여 React는 클라이언트와 서버에서 렌더링할 수 있으므로 구성 요소 수준에서 렌더링 환경을 선택할 수 있습니다. 기본적으로 App 디렉토리는 서버 구성 요소를 사용하므로 서버에서 구성 요소를 쉽게 렌더링하고 클라이언트에 전송되는 JavaScript의 양을 줄일 수 있습니다. 그러나 App 내에서 클라이언트 구성 요소를 사용하고 클라이언트에서 렌더링 할 수 있는 옵션이 있습니다. -> **Server Component, Client Component 같이 사용**  
 
-  ![alt](https://www.google.com/url?sa=i&url=https%3A%2F%2Fmycodings.fly.dev%2Fblog%2F2022-11-17-nextjs-13-client-component&psig=AOvVaw3XitIFejSwKpu0I1ksUaxW&ust=1680259490306000&source=images&cd=vfe&ved=0CBAQjRxqFwoTCOisvMK8g_4CFQAAAAAdAAAAABAE)
+ ![image](https://user-images.githubusercontent.com/118407356/228813198-c6bd6368-84c8-4f82-8e15-b5246248a641.png)
